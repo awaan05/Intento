@@ -122,9 +122,9 @@ struct PomodoroView: View {
                                 .font(.system(size: 24))
                                 .fontWeight(.semibold)
                                 .foregroundColor(.white)
-                                .scaleEffect(showSecondaryText && viewModel.timerState != .breakRunning ? 0.8 : 1.0)
-                                .animation(.spring(response: 0.4, dampingFraction: 0.5), value: showSecondaryText)
-                                .animation(.spring(response: 0.4, dampingFraction: 0.5), value: viewModel.timerState)
+                                .scaleEffect(showSecondaryText && viewModel.timerState != .breakRunning ? 0.7 : 1.0)
+                                .animation(.spring(response: 0.5, dampingFraction: 0.5), value: showSecondaryText)
+                                .animation(.spring(response: 0.5, dampingFraction: 0.5), value: viewModel.timerState)
                         }
                     }
                 }
@@ -243,7 +243,7 @@ struct PomodoroView: View {
         case .paused:
             return "Resume"
         case .breakRunning:
-            return viewModel.sessionType == .shortBreak ? "Quick Break" : "Long Break"
+            return viewModel.sessionType == .shortBreak ? "Quick Break" : "Recover"
         default:
             return ""
         }
