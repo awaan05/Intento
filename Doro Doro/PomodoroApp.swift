@@ -1,6 +1,6 @@
 //
-//  doro_doroApp.swift
-//  doro doro
+//  Doro_DoroApp.swift
+//  Doro Doro
 //
 //  Created by Mohammad Awaan Nisar on 28/06/25.
 //

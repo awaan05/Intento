@@ -1,6 +1,6 @@
 //
 //  PomodoroView.swift
-//  doro doro
+//  Doro Doro
 //
 //  Created by Mohammad Awaan Nisar on 29/06/25.
 //
@@ -187,7 +187,7 @@ struct PomodoroView: View {
         }
     }
     
-    // New computed property for break progress
+    // Break progress
     private var breakProgress: Double {
         
         let totalTime: Double
@@ -203,7 +203,7 @@ struct PomodoroView: View {
         return Double(viewModel.timeRemaining) / totalTime
     }
     
-    // Break bar color
+    // Break capsule color
     private var breakBarColor: Color {
         switch viewModel.sessionType {
         case .shortBreak:
@@ -220,13 +220,11 @@ struct PomodoroView: View {
     }
     
     private var showPrimaryText: Bool {
-        return viewModel.timerState == .ready || viewModel.timerState == .breakReady
-        || viewModel.timerState == .paused
+        return viewModel.timerState == .ready || viewModel.timerState == .breakReady || viewModel.timerState == .paused
     }
     
     private var showSecondaryText: Bool {
         return viewModel.timerState == .running
-        //|| viewModel.timerState == .paused
     }
     
     private var primaryButtonText: String {
@@ -302,7 +300,7 @@ struct PomodoroView: View {
     
 }
 
-// MARK: - Custom Button Style
+// MARK: - Custom Button Style (to avoid flash when clicked)
 struct NoFlashButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label

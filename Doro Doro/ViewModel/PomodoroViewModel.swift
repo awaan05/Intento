@@ -1,6 +1,6 @@
 //
 //  PomodoroViewModel.swift
-//  doro doro
+//  Doro Doro
 //
 //  Created by Mohammad Awaan Nisar on 29/06/25.
 //
@@ -9,16 +9,16 @@ import SwiftUI
 import Foundation
 
 class PomodoroViewModel: ObservableObject {
-    @Published var timeRemaining: Int = 25
+    @Published var timeRemaining: Int = 5
     @Published var isRunning: Bool = false
     @Published var timerState: TimerState = .ready
     @Published var currentSession: Int = 1
     @Published var sessionType: SessionType = .work
     
     private var timer: Timer?
-    let workDuration = 25
+    let workDuration = 5
     let shortBreakDuration = 5
-    let longBreakDuration = 15
+    let longBreakDuration = 5
     private let totalSessions = 4
     
     var formattedTime: String {
@@ -81,71 +81,38 @@ class PomodoroViewModel: ObservableObject {
         timer = nil
     }
     
-//    private func handleTimerCompletion() {
-//        stopTimer()
-//        isRunning = false
-//        
-//        switch sessionType {
-//        case .work:
-//            // Work session completed, prepare for break
-//            if currentSession == totalSessions {
-//                // Last session - long break
-//                sessionType = .longBreak
-//                timeRemaining = longBreakDuration
-//            } else {
-//                // Regular break
-//                sessionType = .shortBreak
-//                timeRemaining = shortBreakDuration
-//            }
-//            timerState = .breakReady
-//            
-//        case .shortBreak, .longBreak:
-//            // Break completed
-//            if sessionType == .longBreak {
-//                // Long break completed - reset to session 1
-//                currentSession = 1
-//            } else {
-//                // Short break completed - next session
-//                currentSession += 1
-//            }
-//            
-//            // Prepare for next work session
-//            sessionType = .work
-//            timeRemaining = workDuration
-//            timerState = .ready
-//        }
-//    }
-    
     private func handleTimerCompletion() {
         stopTimer()
 
         switch sessionType {
         case .work:
             if currentSession == totalSessions {
-                // Last session - long break
                 sessionType = .longBreak
                 timeRemaining = longBreakDuration
             } else {
-                // Regular short break
                 sessionType = .shortBreak
                 timeRemaining = shortBreakDuration
             }
             timerState = .breakRunning
-            startCountdown()  // ⬅️ Automatically start break
+            
+            // Automatically start break
+            startCountdown()
 
         case .shortBreak:
             currentSession += 1
             sessionType = .work
             timeRemaining = workDuration
             timerState = .running
-            startCountdown()  // ⬅️ Automatically start next work session
+            
+            // Automatically start next work session
+            startCountdown()
 
         case .longBreak:
             currentSession = 1
             sessionType = .work
             timeRemaining = workDuration
             timerState = .ready
-            // Stop here and let user manually restart if they want
+            // End of complete a complete session. Stop here and let user manually restart if they want
         }
     }
     

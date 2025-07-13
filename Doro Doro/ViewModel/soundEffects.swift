@@ -1,6 +1,6 @@
 //
 //  soundEffects.swift
-//  doro doro
+//  Doro Doro
 //
 //  Created by Mohammad Awaan Nisar on 12/07/25.
 //
