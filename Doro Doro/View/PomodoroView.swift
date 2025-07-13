@@ -18,6 +18,7 @@ struct PomodoroView: View {
             VStack(spacing: 100) {
                 VStack(spacing: 40) {
                     HStack(alignment: .bottom, spacing: 57) {
+                        
                         // Session 1 Capsule
                         ZStack(){
                             Capsule()
@@ -34,6 +35,7 @@ struct PomodoroView: View {
                                 .animation(.spring(response: 0.6, dampingFraction: 0.5), value: getSessionProgress(for: 1))
                                 
                         }
+                        
                         // Session 2 Capsule
                         ZStack(){
                             Capsule()
@@ -49,6 +51,7 @@ struct PomodoroView: View {
 //                                .animation(.easeInOut(duration: 1), value: getSessionProgress(for: 2))
                                 .animation(.spring(response: 0.6, dampingFraction: 0.5), value: getSessionProgress(for: 2))
                         }
+                        
                         // Session 3 Capsule
                         ZStack(){
                             Capsule()
@@ -64,6 +67,7 @@ struct PomodoroView: View {
 //                                .animation(.easeInOut(duration: 1), value: getSessionProgress(for: 3))
                                 .animation(.spring(response: 0.6, dampingFraction: 0.5), value: getSessionProgress(for: 3))
                         }
+                        
                         // Session 4 Capsule
                         ZStack(){
                             Capsule()
@@ -81,20 +85,21 @@ struct PomodoroView: View {
                         }
                     }
                     
-                    // Timer display with rounded design
+                    // Timer
                     Text(viewModel.formattedTime)
                         .font(.system(size: 120, weight: .bold, design: .rounded))
                         .monospacedDigit()
                         .foregroundColor(Color(UIColor.label))
                 }
                 
-                // Animated button with spring animations
+                // Main Button
                 Button(action: {
                     triggerButtonAnimation()
                     mainButtonAction()
                 }) {
                     ZStack {
-                        // Background shape that morphs between button and horizontal bar
+                        
+                        // Button Capsule
                         Capsule()
                             .fill(viewModel.timerState == .breakRunning ? Color(breakBarColor) : mainButtonColor)
                             .frame(
@@ -104,6 +109,7 @@ struct PomodoroView: View {
                             .animation(.spring(response: 0.5, dampingFraction: 0.45), value: viewModel.timerState)
                         
                         ZStack {
+                            
                             // Primary button text
                             Text(primaryButtonText)
                                 .font(.title2)
@@ -127,12 +133,12 @@ struct PomodoroView: View {
                 .frame(height: 200)
             }
             .onChange(of: viewModel.timerState) { oldState, newState in
-                // Only animate automatic state changes (not user-triggered ones)
+                // Only animate automatic state changes
                 if oldState != newState {
                     triggerButtonAnimation()
                 }
                 
-                // Play sounds when transitioning TO break states
+                // Play sound when transitioning to break states
                         if newState == .breakRunning {
                             if viewModel.sessionType == .shortBreak || viewModel.sessionType == .longBreak {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
@@ -140,11 +146,13 @@ struct PomodoroView: View {
                                 }
                             }
                         }
+                
                         // Play sound when work session starts automatically (after break)
                         else if newState == .running && oldState == .breakRunning {
                             sound.playSound(sound: .sbreak2)
                         }
-                // Play sound when long break ends and goes to ready state
+                
+                        // Play sound when long break ends and goes to ready state
                        else if newState == .ready && oldState == .breakRunning && viewModel.sessionType == .work {
                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                                sound.playSound(sound: .lbreak)
