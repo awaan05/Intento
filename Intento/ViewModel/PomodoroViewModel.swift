@@ -9,16 +9,16 @@ import SwiftUI
 import Foundation
 
 class PomodoroViewModel: ObservableObject {
-    @Published var timeRemaining: Int = 5
+    @Published var timeRemaining: Int = 25 * 60
     @Published var isRunning: Bool = false
     @Published var timerState: TimerState = .ready
     @Published var currentSession: Int = 1
     @Published var sessionType: SessionType = .work
     
     private var timer: Timer?
-    let workDuration = 5
-    let shortBreakDuration = 5
-    let longBreakDuration = 5
+    let workDuration = 25 * 60
+    let shortBreakDuration = 5 * 60
+    let longBreakDuration = 15 * 60
     private let totalSessions = 4
     
     var formattedTime: String {
