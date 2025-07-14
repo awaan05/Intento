@@ -146,7 +146,7 @@ struct PomodoroView: View {
                 
                         // Play sound when long break ends and goes to ready state
                        else if newState == .ready && oldState == .breakRunning && viewModel.sessionType == .work {
-                           DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                           DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                sound.playSound(sound: .lbreak)
                            }
                        }
