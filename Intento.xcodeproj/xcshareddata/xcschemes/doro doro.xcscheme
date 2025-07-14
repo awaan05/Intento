@@ -21,6 +21,20 @@
                ReferencedContainer = "container:Doro Doro.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "12F5E5DD2E0F2BEF00F9F6FB"
+               BuildableName = "Intento.app"
+               BlueprintName = "Intento"
+               ReferencedContainer = "container:Intento.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -45,11 +59,20 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "12F5E5DD2E0F2BEF00F9F6FB"
+            BuildableName = "Intento.app"
+            BlueprintName = "Intento"
+            ReferencedContainer = "container:Intento.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "12F5E5DD2E0F2BEF00F9F6FB"
             BuildableName = "Doro Doro.app"
             BlueprintName = "Doro Doro"
             ReferencedContainer = "container:Doro Doro.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -67,6 +90,15 @@
             ReferencedContainer = "container:Doro Doro.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "12F5E5DD2E0F2BEF00F9F6FB"
+            BuildableName = "Doro Doro.app"
+            BlueprintName = "Doro Doro"
+            ReferencedContainer = "container:Doro Doro.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -1,6 +1,6 @@
 //
 //  PomodoroView.swift
-//  Doro Doro
+//  Intento
 //
 //  Created by Mohammad Awaan Nisar on 29/06/25.
 //
@@ -26,12 +26,10 @@ struct PomodoroView: View {
                                 .frame(width: 18, height: 80)
                             Capsule()
                                 .fill(Color(red: 152/255, green: 251/255, blue: 152/255))
-//                                .fill(Color(red: 26/255, green: 26/255, blue: 26/255))
                                 .mask(Rectangle()
                                     .frame(height: 80 * getSessionProgress(for: 1))
                                     .offset(y: 40 - (80 * getSessionProgress(for: 1)) / 2))
                                 .frame(width: 18, height: 80)
-//                                .animation(.easeInOut(duration: 1), value: getSessionProgress(for: 1))
                                 .animation(.spring(response: 0.6, dampingFraction: 0.5), value: getSessionProgress(for: 1))
                                 
                         }
@@ -43,12 +41,10 @@ struct PomodoroView: View {
                                 .frame(width: 18, height: 110)
                             Capsule()
                                 .fill(Color(red: 144/255, green: 238/255, blue: 144/255))
-//                                .fill(Color(red: 26/255, green: 26/255, blue: 26/255))
                                 .mask(Rectangle()
                                     .frame(height: 110 * getSessionProgress(for: 2))
                                     .offset(y: 55 - (110 * getSessionProgress(for: 2)) / 2))
                                 .frame(width: 18, height: 110)
-//                                .animation(.easeInOut(duration: 1), value: getSessionProgress(for: 2))
                                 .animation(.spring(response: 0.6, dampingFraction: 0.5), value: getSessionProgress(for: 2))
                         }
                         
@@ -59,12 +55,10 @@ struct PomodoroView: View {
                                 .frame(width: 18, height: 150)
                             Capsule()
                                 .fill(Color(red: 50/255, green: 205/255, blue: 50/255))
-//                                .fill(Color(red: 26/255, green: 26/255, blue: 26/255))
                                 .mask(Rectangle()
                                     .frame(height: 150 * getSessionProgress(for: 3))
                                     .offset(y: 75 - (150 * getSessionProgress(for: 3)) / 2))
                                 .frame(width: 18, height: 150)
-//                                .animation(.easeInOut(duration: 1), value: getSessionProgress(for: 3))
                                 .animation(.spring(response: 0.6, dampingFraction: 0.5), value: getSessionProgress(for: 3))
                         }
                         
@@ -75,12 +69,10 @@ struct PomodoroView: View {
                                 .frame(width: 18, height: 220)
                             Capsule()
                                 .fill(Color(red: 34/255, green: 139/255, blue: 34/255))
-//                                .fill(Color(red: 26/255, green: 26/255, blue: 26/255))
                                 .mask(Rectangle()
                                     .frame(height: 220 * getSessionProgress(for: 4))
                                     .offset(y: 110 - (220 * getSessionProgress(for: 4)) / 2))
                                 .frame(width: 18, height: 220)
-//                                .animation(.easeInOut(duration: 1), value: getSessionProgress(for: 4))
                                 .animation(.spring(response: 0.6, dampingFraction: 0.5), value: getSessionProgress(for: 4))
                         }
                     }
@@ -149,7 +141,7 @@ struct PomodoroView: View {
                 
                         // Play sound when work session starts automatically (after break)
                         else if newState == .running && oldState == .breakRunning {
-                            sound.playSound(sound: .sbreak2)
+                            sound.playSound(sound: .start)
                         }
                 
                         // Play sound when long break ends and goes to ready state

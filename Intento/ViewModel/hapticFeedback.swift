@@ -1,6 +1,6 @@
 //
 //  hapticFeedback.swift
-//  Doro Doro
+//  Intento
 //
 //  Created by Mohammad Awaan Nisar on 12/07/25.
 //

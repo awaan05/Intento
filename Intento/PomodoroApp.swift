@@ -1,6 +1,6 @@
 //
-//  Doro_DoroApp.swift
-//  Doro Doro
+//  IntentoApp.swift
+//  Intento
 //
 //  Created by Mohammad Awaan Nisar on 28/06/25.
 //

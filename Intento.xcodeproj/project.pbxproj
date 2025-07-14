@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		12F5E5DE2E0F2BEF00F9F6FB /* Doro Doro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Doro Doro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12F5E5DE2E0F2BEF00F9F6FB /* Intento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Intento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		12F5E5E02E0F2BEF00F9F6FB /* Doro Doro */ = {
+		12F5E5E02E0F2BEF00F9F6FB /* Intento */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Doro Doro";
+			path = Intento;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		12F5E5D52E0F2BEF00F9F6FB = {
 			isa = PBXGroup;
 			children = (
-				12F5E5E02E0F2BEF00F9F6FB /* Doro Doro */,
+				12F5E5E02E0F2BEF00F9F6FB /* Intento */,
 				12F5E5DF2E0F2BEF00F9F6FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		12F5E5DF2E0F2BEF00F9F6FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12F5E5DE2E0F2BEF00F9F6FB /* Doro Doro.app */,
+				12F5E5DE2E0F2BEF00F9F6FB /* Intento.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		12F5E5DD2E0F2BEF00F9F6FB /* Doro Doro */ = {
+		12F5E5DD2E0F2BEF00F9F6FB /* Intento */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12F5E5E92E0F2BF000F9F6FB /* Build configuration list for PBXNativeTarget "Doro Doro" */;
+			buildConfigurationList = 12F5E5E92E0F2BF000F9F6FB /* Build configuration list for PBXNativeTarget "Intento" */;
 			buildPhases = (
 				12F5E5DA2E0F2BEF00F9F6FB /* Sources */,
 				12F5E5DB2E0F2BEF00F9F6FB /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				12F5E5E02E0F2BEF00F9F6FB /* Doro Doro */,
+				12F5E5E02E0F2BEF00F9F6FB /* Intento */,
 			);
-			name = "Doro Doro";
+			name = Intento;
 			packageProductDependencies = (
 			);
 			productName = "doro doro";
-			productReference = 12F5E5DE2E0F2BEF00F9F6FB /* Doro Doro.app */;
+			productReference = 12F5E5DE2E0F2BEF00F9F6FB /* Intento.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 12F5E5D92E0F2BEF00F9F6FB /* Build configuration list for PBXProject "Doro Doro" */;
+			buildConfigurationList = 12F5E5D92E0F2BEF00F9F6FB /* Build configuration list for PBXProject "Intento" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				12F5E5DD2E0F2BEF00F9F6FB /* Doro Doro */,
+				12F5E5DD2E0F2BEF00F9F6FB /* Intento */,
 			);
 		};
 /* End PBXProject section */
@@ -257,8 +257,8 @@
 				DEVELOPMENT_TEAM = XSN56PQMFC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "doro-doro-Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_FILE = "Intento-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -269,7 +269,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "app.Doro-Doro";
+				PRODUCT_BUNDLE_IDENTIFIER = app.Intento;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -288,8 +288,8 @@
 				DEVELOPMENT_TEAM = XSN56PQMFC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "doro-doro-Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_FILE = "Intento-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -300,7 +300,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "app.Doro-Doro";
+				PRODUCT_BUNDLE_IDENTIFIER = app.Intento;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -311,7 +311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12F5E5D92E0F2BEF00F9F6FB /* Build configuration list for PBXProject "Doro Doro" */ = {
+		12F5E5D92E0F2BEF00F9F6FB /* Build configuration list for PBXProject "Intento" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12F5E5E72E0F2BF000F9F6FB /* Debug */,
@@ -320,7 +320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		12F5E5E92E0F2BF000F9F6FB /* Build configuration list for PBXNativeTarget "Doro Doro" */ = {
+		12F5E5E92E0F2BF000F9F6FB /* Build configuration list for PBXNativeTarget "Intento" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				12F5E5EA2E0F2BF000F9F6FB /* Debug */,
